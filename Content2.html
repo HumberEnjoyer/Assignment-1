@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Zone</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/SideMenu.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <span class="menu-icon" onclick="openNav()"></span>
+        <a class="left" href="javascript:void(0)" onclick="openNav()">
+            <span class="title">Nature Zone</span>
+        </a>
+
+        <nav class="center">
+            <a href="/Home.html">Home</a>
+            <a href="/Contact.html">Contact</a>
+            <a href="/Content1.html">Bushcraft</a>
+            <a style="border-bottom: 5px solid #ffc107;" href="/Content2.html">Kit</a>
+        </nav>
+
+        <nav class="right">
+            <a href="https://en.wikipedia.org/wiki/Tree">more info</a>
+        </nav>
+
+    </header>
+
+    <div id="mySidemenu" class="sidemenu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/Home.html">Home</a>
+        <a href="/Contact.html">Contact</a>
+        <a href="/Content1.html">Bushcraft</a>
+        <a href="/Content2.html">Kit</a>
+    </div>
+
+    <main>
+        <div class="wrapper">
+            <video autoplay muted loop>
+                <source src="https://static.vecteezy.com/system/resources/previews/007/659/424/mp4/light-shining-down-in-nature-video.mp4" type="video/mp4">
+            </video>
+        <div class="overlay"></div>
+        </div>
+
+        <div class="view">
+            <div class="card">
+                <div class="card-title">Best boots</div>
+                <div class="card-content">
+                <img src="https://www.crispius.com/media/catalog/product/cache/788f7df4f36169d9469caa19667a5038/c/r/crispi_idaho-ii-main_1.jpg" style="height: 100%; width: 100%;">
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Best Backpack</div>
+                <div class="card-content">
+                    <img src="https://www.fjallraven.com/494e7d/globalassets/catalogs/fjallraven/f2/f233/f23321/f633/7323450522278_fw19_a_singi_48_fjaellraeven_21.jpg" style="height: 100%; width: 100%;">
+                    <section>
+                        This bad boy can hold a whole lotta <italic>stuff</italic>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">Best Tent</div>
+                <div class="card-content">
+                <img src="https://www.kuiu.com/cdn/shop/files/12103-CM-Front-OpenVestibule-FootPrint-MountainStar3PTent-2024_800x.png" style="height: 100%; width: 100%;">
+                    <section>
+                        You will sleep like a baby in this <strong>tent</strong>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

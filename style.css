@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  line-height: 1.75;
+  display: flex;
+  flex-direction: column;
+}
+/* header styling */
+header {
+  align-items: center;
+  background-color: #080808;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #fff;
+  display: flex;
+  height: 90px;
+  width: 100%;
+  text-transform: uppercase
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a {
+  border-bottom: 5px solid #080808;
+  cursor: pointer;
+  padding: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  filter: invert(0.2);
+}
+
+.left,
+.center,
+.right {
+  align-items: inherit;
+  display: inherit;
+  padding: 3px;
+}
+
+.left {
+  font-size: 158%;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.center {
+  flex: auto;
+  justify-content: center;
+}
+@media (max-width: 48em) {
+  header .left {
+    margin-left: 0;
+  }
+}
+
+
+/*video formating*/
+.wrapper {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-color: #1f1f1f;
+  height: 100%;
+  width: 100%;
+}
+.wrapper  video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* footer */
+footer {
+  bottom: 0;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 10px;
+  left: 0;
+  padding: 1% 2%;
+  position: absolute;
+  
+}
+footer a {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+/*the slide*/
+@keyframes slideInRight {
+  from{
+    transform: translate(100%);
+  }
+
+  to{
+    transform: translate(0);
+  }
+
+/*the stuff for main page*/  
+}
+ .introText {
+  bottom: 70px;
+  color: #fff;
+  position: absolute;
+  right: 5%;
+  text-transform: uppercase;
+  font-size: 130%;
+  text-align: right;
+  
+  animation: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  
+}
+ .introText div:first-child {
+  font-size: 200%;
+  text-align: right;
+}
+@media (max-width: 680px), (max-height: 450px) {
+  .introText, footer, .right{
+    display: none;
+  }
+}
+/* button style */
+.button {
+  background-color: #ffc107; /* common background */
+  border: none;
+  border-radius: 0.125rem;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  color: #000;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+  margin-top: 20%;
+}
+.button:hover:not(:active) {
+  filter: invert(0.15);
+}
+.button:active {
+  background: #080808;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  color: #fff;
+}
+
+/*the content stuff for cards*/
+@keyframes slideInLeft {
+  from{
+    transform: translate(-300%);
+  }
+
+  to{
+    transform: translate(0);
+  }
+}
+
+.card, .card-form{
+  background: #080808;
+  color: #fff;
+  border-radius: 1%;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  max-width: 20em;
+  padding: 20px 20px;
+  margin: 30px 0;
+  min-width: 20%;
+
+  animation: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/*form style*/
+
+.form-group {
+  margin-bottom: 1%;
+}
+.form-control {
+  width: 100%;
+  padding: 3px;
+  border-radius: 2%;
+  border: 1px solid #ccc;
+  margin-bottom: 1%;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+ /*styles for side menu*/
+.sidemenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidemenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidemenu a:hover {
+    color: #f1f1f1;
+}
+
+.sidemenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidemenu {padding-top: 15px;}
+    .sidemenu a {font-size: 18px;}
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+@media (max-width: 38em) {
+    .center {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .title {
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 38em) {
+    .menu-icon {
+        display: none;
+    }
+} 
